@@ -130,6 +130,10 @@ h4:hover::before {
   opacity: 1;
   visibility: hidden;
 }
+img{
+    width: 80%;
+    max-width: 320px;
+}
 
 /* Nieuwe tekst */
 h4::after {
@@ -177,4 +181,90 @@ body {
   background: linear-gradient(-45deg, #3b3b3b, #5e2a3f, #3b3b3b, #5e2a3f);
   background-size: 400% 400%;
   animation: backgroundPulse 20s ease infinite;
+}
+@media (max-width: 768px) {
+  body {
+    margin: 15px;
+    font-size: 15px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #flower-container,
+  #ring-container,
+  #baby-container {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+
+  .popup-content {
+    width: 90%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .popup-content button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  button.yes,
+  button.no {
+    display: block;
+    margin: 10px auto;
+  }
+
+  h4::after {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  td, th {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .popup-content {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .popup-content button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 16px;
+  }
+
+  #flower-container,
+  #ring-container,
+  #baby-container {
+    font-size: 24px;
+  }
+
+  h4::after {
+    font-size: 12px;
+  }
 }
