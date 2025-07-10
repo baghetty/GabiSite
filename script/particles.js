@@ -1,6 +1,6 @@
 window.onload = function () {
   const imagePaths = [
-    "img/image.jpg", "img/image2.jpg", "img/0CAC8F87-148E-49A8-A1CB-1918936AC678.jpg",
+    "../img/image.jpg", "../img/image2.jpg", "img/0CAC8F87-148E-49A8-A1CB-1918936AC678.jpg",
     "img/1F94E6FA-BD79-4E9B-A217-0E155CEE56FD.jpg", "img/26C16A67-AD1A-46A5-AF92-BA4DCBE48B04.jpg",
     "img/2DE9764F-685A-4BB0-B330-DD438F3B6ABF.jpg", "img/6F13E962-01D1-42DF-8E5E-D0404350CEEE.jpg",
     "img/703411CA-45B9-4C86-90EF-41F6014FAFCE.jpg", "img/E42719DE-6651-41B7-88FB-5109EF2B6BEE.jpg",
