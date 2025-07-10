@@ -1,0 +1,180 @@
+body{
+  background: linear-gradient(135deg, #3b3b3b, #1f1f1f);
+  color: rgba(255, 192, 203, 0.9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 30px;
+  transition: background 0.6s ease;
+}
+table {
+    border-collapse: collapse;
+    width: 300px;
+    text-align: center;
+}
+
+td, th {
+    border: 5px solid rgba(255, 192, 203, 0.757);
+    padding: 10px;
+}
+h1, h2, h3 {
+  color: rgba(255, 182, 193, 0.95);
+  text-shadow: 0 0 8px #ffb6c1;
+  transition: color 0.3s ease;
+}
+h1:hover, h2:hover, h3:hover {
+  color: #ff69b4;
+  cursor: default;
+}
+#flower-container,
+#ring-container,
+#baby-container {
+    font-size: 48px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+#popup.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup-content {
+    background-color: rgb(206, 103, 139);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.popup-content button:hover {
+    transform: scale(1.05);
+}
+
+button.yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.yes:hover {
+    background-color: #45a049;
+}
+
+button.no {
+    background-color: #f44336;
+    color: white;
+    transition: transform 0.3s ease;
+
+}
+
+button.no:hover {
+    background-color: #d32f2f;
+}
+
+.hidden {
+    display: none;
+}
+h4 {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Verberg originele tekst bij hover */
+h4:hover {
+  animation: shake 0.9s ease;
+  transform: scale(1);
+}
+
+/* Verberg originele tekstinhoud */
+h4::before {
+  content: attr(data-original);
+  visibility: visible;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Vervang tekst bij hover */
+h4:hover::before {
+  opacity: 1;
+  visibility: hidden;
+}
+
+/* Nieuwe tekst */
+h4::after {
+  content: "I want to smash you gorgeous (click on me)";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px #ff5f6d, 0 0 20px #ffc371;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Toon nieuwe tekst bij hover */
+h4:hover::after {
+  opacity: 1;
+}
+
+/* Shake animatie */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+.hidden {
+  display: none;
+}
+@keyframes                                              Pulse {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, #3b3b3b, #5e2a3f, #3b3b3b, #5e2a3f);
+  background-size: 400% 400%;
+  animation: backgroundPulse 20s ease infinite;
+}
